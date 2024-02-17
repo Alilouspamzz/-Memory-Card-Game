@@ -13,6 +13,8 @@ cards.forEach((card) => {
 
 function flipCard() {
   if (!canClick) return;
+  if (this.classList.contains("flip")) return;
+  
   this.classList.add("flip");
 
   if (firstCard == null) firstCard = this;
