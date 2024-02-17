@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  height: 100vh;
+  background-color: #585454;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 650px;
+  height: 650px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+
+  perspective: 1000px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+.card:active {
+  transform: scale(95%);
+}
+.card img {
+  width: 150px;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  box-shadow: 1px 1px 2px #fff;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.face {
+  transform: rotateY(180deg);
+}
+
+.winner {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: popins;
+  letter-spacing: 1px;
+}
+.winner h1 {
+  font-size: 150px;
+  margin: 20px;
+}
+.winner button {
+  width: 120px;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+  background-color: #eb0b0b;
+}
+
+.winner button:hover {
+  transform: scale(1.3);
+  letter-spacing: 1px;
+  background-color: #0beb83;
+}
