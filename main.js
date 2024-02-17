@@ -30,9 +30,9 @@ function isMatching() {
     secondCard = null;
     scoor++;
     if (scoor == 6) {
-    setTimeout(function () {
-    winner();
-    }, 3000);
+      setTimeout(() => {
+        winner();
+      }, 2000);
     }
   } else {
     canClick = false;
@@ -60,7 +60,7 @@ function winner() {
 }
 
 function newGame() {
-  setTimeout(function () {
+  setTimeout(() => {
     location.reload();
   }, 1000);
 }
